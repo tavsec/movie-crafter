@@ -6,8 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "devdojo/genesis": "dev-main",
         "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "openai-php/client": "^0.10.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

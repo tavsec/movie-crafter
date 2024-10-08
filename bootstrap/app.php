@@ -11,6 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+		$middleware->alias([
+			'redirect-to-dashboard' => \App\Http\Middleware\RedirectToDashboard::class
+		]);
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
