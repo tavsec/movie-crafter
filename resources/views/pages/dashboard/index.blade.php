@@ -9,7 +9,7 @@ name('dashboard');
 middleware(['auth', 'verified']);
 
 state([
-    "movies" => fn() => auth()->user()->movies()->orderByDesc("id")->get()
+    "movies" => fn() => auth()->user()->movies()->orderByDesc("id")->limit(10)->get()
 ])
 
 ?>
@@ -26,7 +26,7 @@ state([
     <div class="mb-3">
         <x-ui.button tag="a" size="md" href="{{ route('movies
 .create') }}" class="ml-auto mb-3">
-            {{ __('Generate New Movie') }}
+            {{ __('Generate New Movie Script') }}
         </x-ui.button>
     </div>
     @volt('dashboard')
@@ -37,7 +37,7 @@ state([
                     class="flex justify-between items-center w-full h-100 bg-pink- border border-dashed bg-gradient-to-br from-white to-zinc-50 rounded-lg border-zinc-200 dark:border-gray-700 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-3 w-full">
                         @foreach($movies as $movie)
-                            <div class="relative w-full bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+                            <a href="{{route("projects.show", ["movie" => $movie->uuid])}}" class="relative w-full bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
 
                                 <!-- Background Image with Dimmed Overlay -->
                                 @if($movie->storyBoards()->first())
@@ -80,7 +80,7 @@ state([
                                         Created: <span>{{ $movie->created_at->diffForHumans() }}</span>
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>

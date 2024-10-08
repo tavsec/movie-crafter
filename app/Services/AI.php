@@ -68,7 +68,7 @@ class AI
     public function generateStoryboardImage($shortDescription, $storyboardDescription){
         return $this->client->images()->create([
             'model' => 'dall-e-3',
-            'prompt' => "You are tasked to draw the storyboard images for a movie. Below, you will find the movie description, and an instruction for a storyboard image. Be sure to use the storyboard image style (black and white) for the sketch image. \n
+            'prompt' => "You are tasked to draw the storyboard images for a movie. Below, you will find the movie description, and an instruction for a storyboard image. Be sure to use the storyboard image style (black and white) for the sketch image. You should always only draw ONE story board at the time, only for the storyboard description. \n
                         ----- \n
                         \n
                         # Movie short description \n
