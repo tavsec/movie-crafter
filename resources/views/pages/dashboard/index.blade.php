@@ -17,13 +17,15 @@ state([
 <x-layouts.app>
     <x-slot name="header">
         <h2 class="text-lg font-semibold leading-tight text-gray-800 dark:text-gray-200">
-            {{ __('Projects') }}
+            {{ __('Movies
+') }}
         </h2>
 
     </x-slot>
 
     <div class="mb-3">
-        <x-ui.button tag="a" size="md" href="{{ route('projects.create') }}" class="ml-auto mb-3">
+        <x-ui.button tag="a" size="md" href="{{ route('movies
+.create') }}" class="ml-auto mb-3">
             {{ __('Generate New Movie') }}
         </x-ui.button>
     </div>

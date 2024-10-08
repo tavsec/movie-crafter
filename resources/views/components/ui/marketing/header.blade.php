@@ -32,7 +32,9 @@
             </div>
             @auth
                 <div class="flex items-center w-auto">
-                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('projects') }}">View projects</x-ui.button>
+                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('movies
+') }}">View movies
+</x-ui.button>
                 </div>
             @else
                 <div class="flex items-center w-auto">

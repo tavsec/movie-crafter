@@ -22,7 +22,8 @@ middleware(['redirect-to-dashboard']);
                         <p class="w-auto h-full px-3 bg-slate-50 dark:bg-neutral-900 dark:text-white py-1.5 font-medium text-sm tracking-widest uppercase  rounded-full text-slate-800/90 group-hover:text-white/100">Welcome to MovieCrafter</p>
                     </div>
                     <h1 class="mt-5 text-4xl font-light leading-tight tracking-tight text-center dark:text-white text-slate-800 sm:text-5xl md:text-8xl">The Beginning of Your<br> Next Great Idea.</h1>
-                    <p class="w-full max-w-2xl mx-auto mt-8 text-lg dark:text-white/60 text-slate-500">The ultimate application starter kit with built-in features like Authentication, User projectss, Edit Profiles, UI Components, and much more! </p>
+                    <p class="w-full max-w-2xl mx-auto mt-8 text-lg dark:text-white/60 text-slate-500">The ultimate application starter kit with built-in features like Authentication, User movies
+s, Edit Profiles, UI Components, and much more! </p>
                     <div class="flex items-center justify-center w-full max-w-sm px-5 mx-auto mt-8 space-x-5">
                         <x-ui.button type="secondary" tag="a" href="https://github.com/thedevdojo/genesis" target="_blank">View the Docs</x-ui.button>
                         <x-ui.button type="primary" tag="a" href="https://github.com/thedevdojo/genesis" target="_blank">View Github Repo</x-ui.button>
