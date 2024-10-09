@@ -1,4 +1,4 @@
-# 🎬 MovieCraft | AI Movie Script & Storyboard Generator
+# 🎬 MovieCrafter | AI Movie Script & Storyboard Generator
 Welcome to the AI Movie Script & Storyboard Generator – an innovative application built to streamline the process of creating movie scripts and visual storyboards using AI technology. This project was created as part of the DEV.to x Pinata Hackathon to showcase the powerful integration of Pinata for secure and efficient digital asset storage. 🚀
 
 ![banner](.github/assets/banner.png)
