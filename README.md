@@ -24,7 +24,7 @@ cp .env.example .env
 ```
 3. Install the PHP dependencies:
 ```bash
-composer installc&& npm run build
+composer install && npm run build
 ```
 4. Run the database migrations:
 ```bash
