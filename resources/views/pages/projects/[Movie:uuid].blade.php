@@ -57,10 +57,10 @@ state([
                         @php $url = $storyboard->getSignedUrl() @endphp
                         <a href="{{$url}}" target="_blank" class="group relative cursor-pointer" >
                             <!-- Image -->
-                            <img src="{{$url}}" alt="{{$storyboard->description}}" class="w-full h-full object-cover rounded-md transition-opacity duration-300 group-hover:opacity-30">
+                            <img style="max-height: 200px;" src="{{$url}}" alt="{{$storyboard->description}}" class="w-full h-full object-cover rounded-md transition-opacity duration-300 group-hover:opacity-10">
 
                             <!-- Text Overlay -->
-                            <div class="absolute inset-0 flex items-center justify-center text-center p-2">
+                            <div class="absolute inset-0 flex items-center justify-center text-center p-2 z-30">
                                 <span class="text-grey-600 text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">{{$storyboard->description}}</span>
                             </div>
                         </a>

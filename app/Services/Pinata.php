@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\PendingRequest;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
 class Pinata
@@ -46,13 +47,15 @@ class Pinata
      * @throws ConnectionException
      */
     public function getSignedUrl($cid){
-        $response = $this->request->post("v3/files/sign", [
-            "url" => config("pinata.gateway") . "files/" . $cid,
-            "date" => now()->unix(),
-            "expires" => 60 * 60,
-            "method" => "GET"
-        ]);
+        return Cache::remember("signed-" . $cid, 60*60*23, function() use ($cid){
+            $response = $this->request->post("v3/files/sign", [
+                "url" => config("pinata.gateway") . "files/" . $cid,
+                "date" => now()->unix(),
+                "expires" => 60 * 60 * 24,
+                "method" => "GET"
+            ]);
 
-        return $response->json("data");
+            return $response->json("data");
+        });
     }
 }
